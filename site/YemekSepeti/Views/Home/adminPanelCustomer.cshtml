@@ -1,0 +1,297 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yemek Sepeti</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+	<style>
+
+		.Tablo {
+			margin: 100px;
+			border: 1px solid black;
+			position: absolute;
+			top: 500px;
+		}
+
+		th {
+			padding: 10px;
+			border: 1px solid black;
+		}
+
+		td {
+			padding: 10px;
+			border: 1px solid black;
+		}
+
+		tr {
+			height: 30px;
+		}
+
+		.DeleteButton {
+			width: 150px;
+			height: 40px;
+			font-size: 18px;
+			position: absolute;
+			top: 600px;
+			left: 1145px;
+		}
+
+		.SearchInput {
+			width: 150px;
+			height: 40px;
+			font-size: 18px;
+			position: absolute;
+			top: 650px;
+			left: 1145px;
+		}
+
+		.DeleteButton:hover {
+			cursor: pointer;
+		}
+
+
+		ProductNameUpdate, UnitPriceUpdate, PasswordUpdate {
+			width: 50px;
+			height: 30px;
+		}
+
+		.selected {
+			background-color: #f0f0f0; /* Seçili satırın arka plan rengi */
+		}
+
+		tr:hover {
+			cursor: pointer;
+		}
+
+		.Add, .Update {
+			margin-left: 25px;
+			margin-top: 10px;
+			width: 336px;
+			height: 48px;
+			border: 1px solid red;
+			border-radius: 8px;
+			background-color: white;
+			color: red;
+			transition: 300ms all;
+		}
+
+			.Add:hover {
+				scale: 1.04;
+				background-color: rgb(252, 231, 231);
+				cursor: pointer;
+			}
+
+			.Update:hover {
+				scale: 1.04;
+				background-color: rgb(252, 231, 231);
+				cursor: pointer;
+			}
+
+		.UpdateCustomer {
+			border: 1px solid black;
+			width: 400px;
+			height: 500px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			position: relative;
+			top: 600px;
+			left: 1145px;
+		}
+
+		.AddCustomer {
+			border: 1px solid black;
+			width: 400px;
+			height: 500px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			position: relative;
+			top: 650px;
+			left: 1145px;
+		}
+
+		.AddCustomerName, .AddCustomerLastName, .AddCustomerMail, .AddCustomerPassword, .AddCustomerAddress, .AddCustomerBuyProduct {
+			margin-left: 25px;
+			margin-top: 10px;
+			width: 336px;
+			height: 40px;
+			border-radius: 8px;
+		}
+
+		.UpdateCustomerName, .UpdateCustomerLastName, .UpdateCustomerMail, .UpdateCustomerPassword, .UpdateCustomerAddress, .UpdateCustomerBuyProduct {
+			margin-left: 25px;
+			margin-top: 10px;
+			width: 336px;
+			height: 40px;
+			border-radius: 8px;
+		}
+
+		.YeniSayfa {
+			position: relative;
+			top: 450px;
+			left: 700px;
+		}
+
+		.YeniSayfa2 {
+			position: relative;
+			top: 450px;
+			left: 700px;
+		}
+
+		.YeniButton {
+			margin-left: 25px;
+			margin-top: 10px;
+			width: 336px;
+			height: 48px;
+			border: 1px solid red;
+			border-radius: 8px;
+			background-color: white;
+			color: red;
+			transition: 300ms all;
+		}
+
+			.YeniButton:hover {
+				scale: 1.04;
+				background-color: rgb(252, 231, 231);
+				cursor: pointer;
+			}
+	</style>
+
+
+	<table class="Tablo">
+		<tr>
+			<th class="th">Id</th>
+			<th class="th">FirstName</th>
+			<th class="th">LastName</th>
+			<th class="th">Email</th>
+			<th class="th">Password</th>
+			<th class="th">Address</th>
+			<th class="th">BuyProduct</th>
+		</tr>
+
+		@foreach (var customer in Model)
+		{
+			<tr>
+				<td>@customer.Id</td>
+				<td>@customer.FirstName</td>
+				<td>@customer.LastName</td>
+				<td>@customer.Email</td>
+				<td>@customer.Password</td>
+				<td>@customer.Address</td>
+				<td>@customer.BuyProduct</td>
+			</tr>
+		}
+
+	</table>
+	<form class="YeniSayfa" action="/Home/adminPanelProduct">
+		<input type="hidden" placeholder="Ürün Adı" class="yeniInput" name="Yeni" value="Product">
+		<button class="YeniButton">Product</button>
+	</form>
+	<form class="YeniSayfa2" action="/Home/adminPanelCustomer">
+		<input type="hidden" placeholder="Ürün Adı" class="yeniInput" name="Yeni" value="Customer">
+		<button class="YeniButton">Customer</button>
+	</form>
+
+	<form class="AddCustomer" method="post" action="/Home/adminPanelCustomer">
+		<input type="text" placeholder="İsim" class="AddCustomerName" name="AddCustomerName">
+		<input type="text" placeholder="Soyisim" class="AddCustomerLastName" name="AddCustomerLastName">
+		<input type="text" placeholder="Mail" class="AddCustomerMail" name="AddCustomerMail">
+		<input type="text" placeholder="Şifre" class="AddCustomerPassword" name="AddCustomerPassword">
+		<input type="text" placeholder="Address" class="AddCustomerAddress" name="AddCustomerAddress">
+		<input type="text" placeholder="BuyProduct" class="AddCustomerBuyProduct" name="AddCustomerBuyProduct">
+		<button class="Add" id="AddProductButton">Müşteri Ekle</button>
+	</form>
+
+	<form id="UpdateCustomerForm" class="UpdateCustomer" method="post" action="/Home/adminPanelCustomer">
+		<input type="hidden" name="id" id="customerId">
+		<input type="text" placeholder="İsim" class="UpdateCustomerName" name="UpdateCustomerName" id="customerName">
+		<input type="text" placeholder="Soyisim" class="UpdateCustomerLastName" name="UpdateCustomerLastName" id="customerLastName">
+		<input type="text" placeholder="Mail" class="UpdateCustomerMail" name="UpdateCustomerMail" id="customerMail">
+		<input type="text" placeholder="Şifre" class="UpdateCustomerPassword" name="UpdateCustomerPassword" id="customerPassword">
+		<input type="text" placeholder="Address" class="UpdateCustomerAddress" name="UpdateCustomerAddress" id="customerAddress">
+		<input type="text" placeholder="BuyProduct" class="UpdateCustomerBuyProduct" name="UpdateCustomerBuyProduct" id="customerBuyProduct">
+		<button class="Update" id="UpdateCustomerButton">Müşteri Güncelle</button>
+	</form>
+
+
+	<button id="deleteSelectedRowButton" class="DeleteButton">Seçilen Satırı Sil</button>
+
+	<form action="@Url.Action("adminPanelCustomer")" method="post">
+		<input type="text" id="searchTextBox" class="SearchInput" placeholder="Müşteri Ara" name="key">
+	</form>
+
+	
+	<script>
+		$(document).ready(function () {
+			$("#deleteSelectedRowButton").click(function () {
+				// Kullanıcıdan silme işleminden emin olup olmadığını sormak için bir onay kutusu göster
+				if (confirm("Seçili satırı silmek istediğinizden emin misiniz?")) {
+					// Seçili satırın Id'sini al
+					var selectedRowId = $(".Tablo tr.selected").find("td:first").text();
+					// AJAX ile silme işlemini gerçekleştir
+					$.post("/Home/DeleteCustomer", { id: selectedRowId }, function () {
+						// Silme işlemi başarılı olduğunda sayfayı yenile
+						location.reload();
+					});
+				}
+			});
+
+			$(document).ready(function () {
+				$(".Tablo tr").click(function () {
+					$(this).addClass("selected").siblings().removeClass("selected");
+				});
+			});
+
+			$(".Tablo tr").click(function () {
+				$(this).addClass("selected").siblings().removeClass("selected");
+			});
+		});
+		$(document).ready(function () {
+			$(".Tablo tr").click(function () {
+				var selectedRow = $(this);
+				var selectedCustomerId = selectedRow.find("td:eq(0)").text();
+				var selectedCustomerName = selectedRow.find("td:eq(1)").text();
+				var selectedCustomerLastName = selectedRow.find("td:eq(2)").text();
+				var selectedCustomerMail = selectedRow.find("td:eq(3)").text();
+				var selectedCustomerPassword = selectedRow.find("td:eq(4)").text();
+				var selectedCustomerAddress = selectedRow.find("td:eq(5)").text();
+				var selectedCustomerBuyProduct = selectedRow.find("td:eq(6)").text();
+
+				$("#customerId").val(selectedCustomerId);
+				$("#customerName").val(selectedCustomerName);
+				$("#customerLastName").val(selectedCustomerLastName);
+				$("#customerMail").val(selectedCustomerMail);
+				$("#customerPassword").val(selectedCustomerPassword);
+				$("#customerAddress").val(selectedCustomerAddress);
+				$("#customerBuyProduct").val(selectedCustomerBuyProduct);
+			});
+		});
+
+		$(document).ready(function () {
+			
+		// Textbox'a tıklandığında çalışacak fonksiyon
+		$("#searchTextBox").on("focus", function () {
+			// AJAX kullanarak server'a isteği gönderin (burada key parametresini boş gönderiyoruz)
+			$.ajax({
+				type: "POST",
+				url: "@Url.Action("adminPanelCustomer")", // AJAX isteğini yönlendireceğiniz URL
+				data: { key: "" }, // Boş gönderiyoruz
+				success: function (result) {
+					// AJAX isteği başarıyla tamamlandığında, sonuç olarak gelen HTML'i belirtilen div'e yerleştirin
+					$("#searchResult").html(result);
+				}
+			});
+		});
+		});
+
+	</script>
+
+</body>
+</html>

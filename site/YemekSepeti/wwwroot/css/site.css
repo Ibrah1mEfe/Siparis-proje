@@ -1,0 +1,709 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+}
+
+body {
+    background-color: white;
+    height: 5300px;
+    overflow-x: hidden;
+}
+
+.Sepet-Button {
+    background-color: white;
+    border: none;
+}
+
+#I-Sepet {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar {
+    z-index: 20;
+    width: 100%;
+    height: 64px;
+    background-color: white;
+    position: fixed;
+    box-shadow: 0px 2px 6px black;
+}
+
+    .navbar nav ul li {
+        display: inline-block;
+    }
+
+
+.Sepet, .Menu, .Kayit-Ol, .Giris-Yap {
+    float: right;
+    margin-right: 20px;
+    position: relative;
+    top: 16px;
+}
+
+.Sepet {
+    margin-right: 270px;
+}
+
+.Button-Giris-Yap, .Button-Kayit-Ol {
+    width: 91px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 300ms all;
+}
+
+.Button-Giris-Yap {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
+
+.Button-Kayit-Ol {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.navbar nav ul li i {
+    margin-top: 8px;
+    margin-right: 24px;
+    margin-left: 10px;
+    scale: 1.4;
+    cursor: pointer;
+}
+
+
+.A-Ana-Sayfaya-Git {
+    color: red;
+    font-size: 24px;
+    position: relative;
+    top: 18px;
+    left: 220px;
+}
+
+.Menu::after {
+    content: "TR";
+    position: relative;
+    right: 12px;
+}
+
+.Button-Giris-Yap:hover {
+    scale: 1.1;
+    background-color: rgb(252, 231, 231);
+}
+
+.Button-Kayit-Ol:hover {
+    scale: 1.1;
+    background-color: rgb(204, 2, 2);
+}
+
+.Ilk-Ekran {
+    width: 100%;
+    height: 608px;
+    background-color: #f7f7f7;
+    position: relative;
+    top: 64px;
+}
+
+.Div-Adres {
+    z-index: 19;
+    width: 701px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 270px;
+    left: 300px;
+}
+
+.Input-Adres {
+    width: 569px;
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(177, 172, 172);
+}
+
+.Kesfet {
+    width: 74.5px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    transition: 300ms all;
+}
+
+    .Kesfet:hover {
+        cursor: pointer;
+        scale: 1.1;
+        background-color: rgb(204, 2, 2);
+    }
+
+.Ilk-Ekran h1 {
+    color: rgb(39, 39, 39);
+    font-size: 40px;
+    position: relative;
+    top: 240px;
+    left: 300px;
+}
+
+.h1-esnaf {
+    position: absolute;
+    left: 300px;
+    top: 790px;
+}
+
+.home-vendor {
+    width: 100%;
+    height: 404px;
+    object-fit: cover;
+    position: absolute;
+    top: 830px;
+}
+
+.hero-home {
+    float: left;
+    position: relative;
+    width: 700px;
+    height: 608px;
+}
+
+.hero-resim {
+    z-index: 17;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    top: -174px;
+}
+
+.satis-katlama {
+    z-index: 16;
+    width: 598px;
+    height: 472px;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 17px;
+    line-height: 26px;
+    position: relative;
+    top: 400px;
+    left: 345px;
+}
+
+.Button-Baslayalim {
+    cursor: pointer;
+    border: none;
+    width: 105px;
+    height: 48px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    margin-top: 18px;
+    transition: 300ms all;
+}
+
+    .Button-Baslayalim:hover {
+        scale: 1.1;
+        background-color: rgb(204, 2, 2);
+    }
+
+.buyukKutu1 {
+    z-index: 24;
+    width: 400px;
+    height: 420px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px black;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: -700px;
+    left: 674px;
+    transition: 300ms all;
+}
+
+.buyukKutu2 {
+    z-index: 24;
+    width: 420px;
+    height: 480px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px black;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: -700px;
+    left: 674px;
+    transition: 300ms all;
+}
+
+.Register {
+    width: 336px;
+    height: 48px;
+    border: 1px solid red;
+    border-radius: 8px;
+    background-color: white;
+    color: red;
+    transition: 300ms all;
+}
+
+    .Register:hover {
+        scale: 1.04;
+        background-color: rgb(252, 231, 231);
+        cursor: pointer;
+    }
+
+.FirstName, .LastName {
+    width: 336px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: 300ms all;
+}
+
+.eMail, .Password {
+    width: 336px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: 300ms all;
+}
+
+.Facebook, .Google {
+    width: 336px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: 300ms all;
+}
+
+.Facebook, .Google {
+    border: none;
+}
+
+.buyukKutu1 h6 {
+    color: #ccc;
+}
+
+.Facebook {
+    background-color: #1877f2;
+}
+
+.buyukKutu1 i {
+    scale: 1.2;
+    float: left;
+    padding-left: 10px;
+}
+
+.buyukKutu2 i {
+    scale: 1.2;
+    float: left;
+    padding-left: 10px;
+}
+
+.Login {
+    width: 336px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    transition: 300ms all;
+}
+
+    .Login:hover {
+        scale: 1.1;
+        background-color: rgb(204, 2, 2);
+        cursor: pointer;
+    }
+
+.Facebook:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.Google:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.Sehirler {
+    width: 100%;
+    height: 674px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    position: relative;
+    top: 500px;
+}
+
+.Sehirler-Hiza {
+    background-color: white;
+    width: 1220px;
+    height: 100px;
+    position: relative;
+    right: 195px;
+}
+
+.Ankara-fotograf, .Antalya-fotograf, .Bursa-fotograf, .Ýstanbul-fotograf, .Ýzmir-fotograf {
+    width: 287px;
+    height: 252px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px black;
+}
+
+.Ankara-div, .Antalya-div, .Bursa-div, .Ýstanbul-div, .Ýzmir-div {
+    width: 93.25px;
+    height: 46px;
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -60px;
+    left: 10px;
+}
+
+
+.Sehirler figure {
+    display: inline-block;
+    margin-left: 12px;
+    position: relative;
+}
+
+.Sehirler h2 {
+    font-size: 28px;
+    position: relative;
+    left: 200px;
+    top: -70px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.Sehirler figure img:hover {
+    scale: 1.01;
+}
+
+.app-home {
+    width: 100%;
+    height: 538px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 500px;
+}
+
+.app {
+    border-radius: 14px;
+    box-shadow: 0px 0px 8px black;
+    width: 1220px;
+    height: 392px;
+    background-color: #ea004b;
+    position: relative;
+}
+
+.Telefon {
+    width: 641.5px;
+    height: 510px;
+    position: absolute;
+    top: -80px;
+    left: 570px;
+}
+
+.QR {
+    width: 80px;
+    height: 78px;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid white;
+    position: absolute;
+    top: 160px;
+}
+
+.app-home .app h1 {
+    position: absolute;
+    top: -50px;
+}
+
+.app-home .app h2 {
+    position: absolute;
+    top: 40px;
+}
+
+.app-home .app p {
+    position: absolute;
+    font-size: 18px;
+    line-height: 22px;
+    top: 160px;
+    left: 100px;
+}
+
+.QR, .mobil-p, .mobil-h2 {
+    margin-left: 30px;
+    color: white;
+}
+
+.hizalama {
+    width: 100%;
+    height: 201px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 500px;
+}
+
+.sehir81 {
+    color: black;
+    font-size: 16px;
+    padding: 10px 10px 10px 60px;
+    width: 1251px;
+    height: 201px;
+    background-color: white;
+}
+
+.sizi-neler-bekliyor-hizalama {
+    list-style-type: none;
+    width: 100%;
+    height: 201px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 520px;
+    right: 245px;
+}
+
+    .sizi-neler-bekliyor-hizalama .sizi-neler-bekliyor .bekliyor-ol {
+        list-style-type: none;
+    }
+
+        .sizi-neler-bekliyor-hizalama .sizi-neler-bekliyor .bekliyor-ol li {
+            list-style-type: none;
+            padding-top: 10px;
+        }
+
+    .sizi-neler-bekliyor-hizalama .sizi-neler-bekliyor p {
+        padding-top: 15px;
+    }
+
+b {
+    position: relative;
+    top: 15px;
+}
+
+.link {
+    color: red;
+}
+
+.alt-taraf {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 700px;
+}
+
+.yatay-cizgi-logo {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 1251px;
+    height: 106px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-top: 40px;
+}
+
+.social {
+    background-color: white;
+    width: 940px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.social-logo {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+    .social-logo a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        margin-left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-logo #icon-i {
+        scale: 1.1;
+    }
+
+    .social-logo a {
+        transition: 300ms all;
+        color: #ccc;
+    }
+
+        .social-logo a:hover {
+            color: red;
+            border: 1px solid red;
+        }
+
+.yatay-cizgi-logo .dik-cizgi {
+    width: 1px;
+    height: 35px;
+    background-color: black;
+    margin: 20px
+}
+
+.alt-taraf-bilgiler {
+    width: 100%;
+    height: 322px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    position: relative;
+    top: 660px;
+}
+
+.bilgiler {
+    width: 1251px;
+    height: 273px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .bilgiler li, .yemeksepeti2023 {
+        margin: 10px;
+    }
+
+        .bilgiler li a {
+            color: black;
+        }
+
+            .bilgiler li a:hover {
+                color: red;
+            }
+
+.QR-TRGO ul {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 460px;
+    left: 520px;
+}
+
+.Mutfaklar {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 500px;
+}
+
+.Mutfak-Sehirler {
+    width: 1251px;
+    height: 452px;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    margin: 10px;
+}
+
+.Mutfak-Sehirler ul {
+    margin-top: 20px;
+}
+
+.Mutfaklar-h4 {
+    font-size: 20px;
+    position: absolute;
+    top: -20px;
+    left: 335px;
+}
+
+.Mutfak-Sehirler ul li:first-child {
+    font-weight: 700;
+}
+
+.Mutfak-Sehirler ul li a {
+    color: black;
+}
+
+    .Mutfak-Sehirler ul li a:hover {
+        color: red;
+    }
+
+.diger-Sehirler {
+    width: 100%;
+    height: 800px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 460px;
+}
+
+.diger-Mutfaklar {
+    width: 1251px;
+    height: 741px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .diger-Mutfaklar ul {
+        margin-top: 80px;
+    }
+
+.diger-Sehirler h4 {
+    font-size: 20px;
+    position: absolute;
+    left: 335px;
+    margin-top: 30px;
+}
+
+.diger-Mutfaklar ul li a {
+    color: black;
+}
+
+    .diger-Mutfaklar ul li a:hover {
+        color: red;
+    }

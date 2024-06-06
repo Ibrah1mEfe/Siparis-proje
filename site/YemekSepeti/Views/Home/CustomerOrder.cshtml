@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yemek Sepeti</title>
+	<link rel="stylesheet" href="food.css">
+	<script src="https://kit.fontawesome.com/3fde9b611c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<style>
+		* {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+		}
+
+		.Nevada-dis-div {
+			width: 100%;
+			height: 247px;
+			background-color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-bottom: 1px solid black;
+		}
+
+		.Nevada-div-ayarlama {
+			width: 80%;
+			height: 197px;
+			background-color: white;
+			display: flex;
+			align-items: center;
+		}
+
+		.vendor-logo__image {
+			width: 156px;
+			height: 156px;
+			border-radius: 12px;
+		}
+
+		.Nevada-Urunler {
+			position: relative;
+			top: -65px;
+		}
+
+			.Nevada-Urunler li {
+				display: inline;
+				margin-left: 5px;
+			}
+
+		.Nevada-Coffee-h1 {
+			position: relative;
+			top: -30px;
+			right: 310px;
+		}
+
+		.teslimat-span {
+			font-size: 12px;
+			padding-top: 2px;
+			width: 82px;
+			height: 14px;
+			text-align: center;
+			border-radius: 8px;
+			border: 1px solid #ccc;
+			background-color: white;
+			position: relative;
+			right: 510px;
+		}
+
+		.fav-button-hizala {
+			position: relative;
+			top: 50px;
+			left: 350px;
+		}
+
+		.fav-button {
+			color: red;
+			background-color: white;
+			width: 163px;
+			height: 48px;
+			border: 1px solid red;
+			border-radius: 8px;
+			transition: 300ms all;
+		}
+
+			.fav-button:hover {
+				scale: 1.1;
+				background-color: rgb(252, 213, 213);
+			}
+
+		#heart {
+			color: red;
+			scale: 1.4;
+			position: relative;
+			right: 10px;
+		}
+
+		.Yorumları-Gor, .Hakkında {
+			margin-top: 20px;
+			position: relative;
+			top: 30px;
+			right: 610px;
+			padding-left: 20px;
+		}
+
+		#yorumlar-heart, .Yorumlar-a, .Hakkında-a {
+			color: red;
+		}
+
+		.urunler-dis-div {
+			width: 100%;
+			height: 500px;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+		}
+
+		.urunler-dis-ul {
+			width: 200px;
+			height: 200px;
+			background-color: white;
+		}
+
+		.Amaricano {
+			width: 437px;
+			height: 136px;
+			border-radius: 8px;
+			border: 1px solid black;
+			transition: 300ms all;
+		}
+
+		.Amaricano-img {
+			height: 120px;
+			float: right;
+			margin-right: 10px;
+			position: relative;
+			top: -35px;
+			border-radius: 8px;
+		}
+
+		.Amaricano-span {
+			padding: 5px;
+			position: relative;
+			top: 20px;
+			float: left;
+		}
+
+		.Arabica {
+			padding: 5px;
+			position: relative;
+			top: 30px;
+			right: 170px;
+		}
+
+		#arti {
+			border-radius: 100px;
+			scale: 1.2;
+			color: white;
+			z-index: 10;
+			position: relative;
+			top: 55px;
+			left: 280px;
+		}
+
+		.span-TL {
+			font-size: 20px;
+			position: relative;
+			top: 60px;
+			right: 120px;
+		}
+
+		.Amaricano:hover {
+			scale: 1.03;
+			background-color: rgb(252, 213, 213);
+			cursor: pointer;
+		}
+
+		.Satın-Al {
+			width: 100px;
+			height: 40px;
+			position: absolute;
+			right: 600px;
+		}
+
+		.formlar {
+			width: 700px;
+			height: 200px;
+			display: inline-block;
+		}
+
+		.form-dis-div {
+			width: 100%;
+			height: 600px;
+			position: relative;
+			top: 50px;
+		}
+
+	</style>
+	<link rel="stylesheet" href="navbar.html">
+	<div class="Nevada-dis-div">
+		<div class="Nevada-div-ayarlama">
+			<picture class="Nevada-Coffee-picture">
+				<img data-testid="vendor-logo" class="vendor-logo__image" srcset="https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg?width=120&amp;height=120 120w, https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg?width=240&amp;height=240 240w, https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg?width=360&amp;height=360 360w, https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg?width=200&amp;height=200 200w, https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg?width=400&amp;height=400 400w, https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg?width=600&amp;height=600 600w, https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg?width=300&amp;height=300 300w, https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg?width=600&amp;height=600 600w, https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg?width=900&amp;height=900 900w, " src="https://images.deliveryhero.io/image/fd-tr/tr-logos/cb7pw-logo.jpg" sizes="(max-width:959px) 90px, (max-width:1263px) 146px, (min-width: 1264px) 156px" alt="Nevada Coffee vendor logo">
+			</picture>
+			<ul class="Nevada-Urunler">
+				<li>Kahve</li>
+				<li>Tatlı</li>
+				<li>Tost & Sandviç</li>
+				<li>Express Teslimat</li>
+			</ul>
+			<h1 class="Nevada-Coffee-h1">Nevada Coffee</h1>
+			<span class="teslimat-span">TESLİMAT</span>
+			<div class="Yorumları-Gor">
+				<i class="fa-solid fa-heart" id="yorumlar-heart"></i>
+				3.8/5(8)
+				<a href="" class="Yorumlar-a">Yorumları Gör</a>
+			</div>
+			<div class="Hakkında">
+				<i class="fa-solid fa-circle-exclamation" id="Unlem"></i>
+				<a href="" class="Hakkında-a">Hakkında</a>
+			</div>
+			<div class="fav-button-hizala">
+				<button class="fav-button">
+					<i class="fa-regular fa-heart" id="heart"></i>
+					Favorilere Ekle
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="form-dis-div">
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="White Hot Chocolate" />
+							<span class="Amaricano-span">White Hot Chocolate</span> <br>
+							<p class="Arabica">Sıcak servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="" alt="" class="Amaricano-img">
+							<span class="span-TL">100 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Cahi Tea Latte" />
+							<span class="Amaricano-span">Cahi Tea Latte</span> <br>
+							<p class="Arabica">Sıcak servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">105 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Salep" />
+							<span class="Amaricano-span">Salep</span> <br>
+							<p class="Arabica">Sıcak servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">95 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Hazelnut Hot Chocolate" />
+							<span class="Amaricano-span">Hazelnut Hot Chocolate</span> <br>
+							<p class="Arabica">Sıcak servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">100 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+
+
+		<form class="formlar" method="post" >
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Caramel Hot Chocolate" />
+							<span class="Amaricano-span">Caramel Hot Chocolate</span> <br>
+							<p class="Arabica">Sıcak servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">100 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Turkish Coffee" />
+							<span class="Amaricano-span">Turkish Coffee</span> <br>
+							<p class="Arabica">Sıcak servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">60 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Double Turkish Coffee" />
+							<span class="Amaricano-span">Double Turkish Coffee</span> <br>
+							<p class="Arabica">Sıcak servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">70 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Hazelnut Hot Chocolate" />
+							<span class="Amaricano-span">Hazelnut Hot Chocolate</span> <br>
+							<p class="Arabica">Sıcak servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">100 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Iced Amaricano" />
+							<span class="Amaricano-span">Iced Amaricano</span> <br>
+							<p class="Arabica">Soğuk servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">90 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Iced Latte" />
+							<span class="Amaricano-span">Iced Latte</span> <br>
+							<p class="Arabica">Soğuk servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">90 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Iced Cappuccino" />
+							<span class="Amaricano-span">Iced Cappuccino</span> <br>
+							<p class="Arabica">Nusret Spacial Cold Drink</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">90 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Iced Mocha" />
+							<span class="Amaricano-span">Iced Mocha</span> <br>
+							<p class="Arabica">Soğuk servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">120 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Iced White Chocolate Mocha" />
+							<span class="Amaricano-span">Iced White Chocolate Mocha</span> <br>
+							<p class="Arabica">Soğuk servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">120 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Iced Caramel Macchiato" />
+							<span class="Amaricano-span">Iced Caramel Macchiato</span> <br>
+							<p class="Arabica">Soğuk servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">120 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Cold Filter Coffee" />
+							<span class="Amaricano-span">Cold Filter Coffee</span> <br>
+							<p class="Arabica">Soğuk servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">80 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Filter Coffee With Cold Milk" />
+							<span class="Amaricano-span">Filter Coffee With Cold Milk</span> <br>
+							<p class="Arabica">Soğuk servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">48.5 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Cold Brew" />
+							<span class="Amaricano-span">Cold Brew</span> <br>
+							<p class="Arabica">Soğuk servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">95 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+
+		<form class="formlar" method="post">
+			<div class="urunler-dis-div">
+				<ul class="urunler-dis-ul">
+					<li>
+						<button class="Amaricano">
+							<input type="hidden" name="BuyProduct" value="Ice Doubleshot Shaken Espresso" />
+							<span class="Amaricano-span">Ice Doubleshot Shaken Espresso</span> <br>
+							<p class="Arabica">Soğuk servis edilir.</p>
+							<a href="" class="arti-a"><i class="fa-solid fa-plus" id="arti"></a></i></a>
+							<img src="indir.jfif" alt="" class="Amaricano-img">
+							<span class="span-TL">100 TL</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</form>
+	</div>
+
+	<div id="navbar"></div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿
+.Tablo {
+    margin: 100px;
+    border: 1px solid black;
+    position:relative;
+    top:500px;
+}
+
+.th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}

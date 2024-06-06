@@ -1,0 +1,53 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yemek Sepeti</title>
+</head>
+<body>
+
+	<style>
+		.YeniSayfa{
+			position: relative;
+			top: 450px;
+			left: 700px;
+		}
+
+		.YeniSayfa2{
+			position: relative;
+			top: 450px;
+			left: 700px;
+		}
+		.YeniButton{
+			margin-left: 25px;
+			margin-top: 10px;
+			width: 336px;
+			height: 48px;
+			border: 1px solid red;
+			border-radius: 8px;
+			background-color: white;
+			color: red;
+			transition: 300ms all;
+		}
+
+			.YeniButton:hover {
+			scale: 1.04;
+			background-color: rgb(252, 231, 231);
+			cursor: pointer;
+		}
+	</style>
+
+	<form class="YeniSayfa"  action="/Home/adminPanelProduct">
+		<input type="hidden" placeholder="Ürün Adı" class="yeniInput" name="Yeni" value="Product">
+		<button class="YeniButton">Product</button>
+	</form>
+	<form class="YeniSayfa2"  action="/Home/adminPanelCustomer">
+		<input type="hidden" placeholder="Ürün Adı" class="yeniInput" name="Yeni" value="Customer">
+		<button class="YeniButton">Customer</button>
+	</form>
+	
+</body>
+</html>
