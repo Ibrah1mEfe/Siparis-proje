@@ -69,7 +69,7 @@ namespace YemekSepetiProje.Controllers
 				{
 					customer.BuyProduct = BuyProduct;				
 				}
-				//customerDal.SendEmail("gonderilecek mail", "Satýn Alma Bilgisi", "Ürün: " + BuyProduct);
+				
 				customerDal.Update(customer);
 			}
 
@@ -177,24 +177,14 @@ namespace YemekSepetiProje.Controllers
 		[HttpPost]
 		public IActionResult Index(string FirstName, string LastName, string Email, string Password)
 		{
-			//var validator = new CustomerValidator();
-			//var result = validator.Validate(customer);
+			
+			
 
 			var usermail = customerDal.GetByEmail(Email);
 			var customerPassword = customerDal.GetByPassword(Password);
 			
 
-			//validation
-			//if (!result.IsValid)
-			//{
-			//	ModelState.Clear();
-			//	foreach (var error in result.Errors)
-			//	{
-			//		ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
-			//	}
-
-			//	return View("/Views/Home/Index.cshtml");
-			//}
+			
 
 
 			if (FirstName == null && LastName == null)
